@@ -21,7 +21,7 @@ public class Calculator {
                 return a * b;
             case "bagi":
                 if (b == 0) {
-                    throw new IllegalArgumentException("Pembagi tidak boleh nol");
+                    throw new IllegalArgumentException("Pembagi tidak boleh nol yaaa");
                 }
                 return a / b;
             default:

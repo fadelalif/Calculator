@@ -10,48 +10,35 @@ package com.mycompany.calculator;
  */
 public class Calculator {
 
-    // Method untuk operasi biner
-    private int operate(int a, int b, String operator) {
-        switch(operator) {
-            case "tambah":
-                return a + b;
-            case "kurang":
-                return a - b;
-            case "kali":
-                return a * b;
-            case "bagi":
-                if (b == 0) {
-                    throw new IllegalArgumentException("Pembagi tidak boleh nol");
-                }
-                return a / b;
-            default:
-                throw new IllegalArgumentException("Operator tidak valid");
-        }
-    }
-
+    // Method untuk penjumlahan
     public int tambah(int a, int b) {
-        return operate(a, b, "tambah");
+        return a + b;
     }
 
+    // Method untuk pengurangan
     public int kurang(int a, int b) {
-        return operate(a, b, "kurang");
+        return a - b;
     }
 
+    // Method untuk perkalian
     public int kali(int a, int b) {
-        return operate(a, b, "kali");
+        return a * b;
     }
 
+    // Method untuk pembagian
     public int bagi(int a, int b) {
-        return operate(a, b, "bagi");
+        if (b == 0) {
+            throw new IllegalArgumentException("Pembagi tidak boleh nol");
+        }
+        return a / b;
     }
 
     public static void main(String[] args) {
         Calculator calc = new Calculator();
 
-        System.out.println("Tambah: " + calc.operate(10, 5, "tambah"));
-        System.out.println("Kurang: " + calc.operate(10, 5, "kurang"));
-        System.out.println("Kali: " + calc.operate(10, 5, "kali"));
-        System.out.println("Bagi: " + calc.operate(10, 5, "bagi"));
+        System.out.println("Tambah: " + calc.tambah(10, 5));
+        System.out.println("Kurang: " + calc.kurang(10, 5));
+        System.out.println("Kali: " + calc.kali(10, 5));
+        System.out.println("Bagi: " + calc.bagi(10, 5));
     }
 }
-

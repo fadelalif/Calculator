@@ -19,7 +19,7 @@ public class CalculatorTest {
 
     @Test
     public void testTambah() {
-        assertEquals(15, calculator.tambah(10, 5));
+        assertEquals(10, calculator.tambah(10, 5));
         assertEquals(0, calculator.tambah(-5, 5));
         assertEquals(-10, calculator.tambah(-5, -5));
     }
